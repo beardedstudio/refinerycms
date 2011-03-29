@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms}
-  s.version           = %q{0.9.9.10}
+  s.version           = %q{0.9.9.13}
   s.description       = %q{A Ruby on Rails CMS that supports Rails 3. It's easy to extend and sticks to 'the Rails way' where possible.}
-  s.date              = %q{2011-03-17}
+  s.date              = %q{2011-03-28}
   s.summary           = %q{A Ruby on Rails CMS that supports Rails 3}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -18,14 +18,14 @@ Gem::Specification.new do |s|
   s.add_dependency    'bundler',                    '~> 1.0'
 
   # Refinery CMS
-  s.add_dependency    'refinerycms-authentication', '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-base',           '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-core',           '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-dashboard',      '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-images',         '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-pages',          '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-resources',      '~> 0.9.9.10'
-  s.add_dependency    'refinerycms-settings',       '~> 0.9.9.10'
+  s.add_dependency    'refinerycms-authentication', '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-base',           '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-core',           '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-dashboard',      '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-images',         '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-pages',          '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-resources',      '~> 0.9.9.13'
+  s.add_dependency    'refinerycms-settings',       '~> 0.9.9.13'
 
   s.files             = [
     '.gitignore',
@@ -56,6 +56,9 @@ Gem::Specification.new do |s|
     'config/environments/production.rb',
     'config/environments/test.rb',
     'config.ru',
+    'features',
+    'features/support',
+    'features/support/paths.rb',
     'lib',
     'lib/refinery.rb',
     'lib/refinerycms',
@@ -63,6 +66,9 @@ Gem::Specification.new do |s|
     'lib/refinerycms.rb',
     'license.md',
     'license.md',
+    'public',
+    'public/javascripts',
+    'public/javascripts/translations.js',
     'readme.md',
     'readme.md',
     'refinerycms.gemspec',

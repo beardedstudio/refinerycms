@@ -1,3 +1,34 @@
+## 0.9.9.13 [28 March 2011]
+
+* Forcing password reset when migrating from older versions of Devise (sigh). [Philip Arndt](https://github.com/parndt)
+* Updated to `refinerycms-i18n 0.9.9.16` - please run `rails generate refinerycms_i18n`. [Philip Arndt](https://github.com/parndt)
+* [See full list](https://github.com/resolve/refinerycms/compare/0.9.9.12...0.9.9.13)
+
+## 0.9.9.12 [27 March 2011]
+
+* Removed `password_salt` field from users table and comment out `config.encryptor` in `config/initializers/devise.rb` to handle update to devise 1.2.0. [Uģis Ozols](https://github.com/ugisozols)
+* [See full list](https://github.com/resolve/refinerycms/compare/0.9.9.11...0.9.9.12)
+
+## 0.9.9.11 [24 March 2011]
+
+* Translated WYMeditor texts to Japanese. [Hiro Asari](https://github.com/BanzaiMan)
+* Supporting `cucumber-rails 0.4.0`. [Philip Arndt](https://github.com/parndt)
+* Added an option to link in the `page_title` enabling easier breadcrumbs. [Sergio Cambra](https://github.com/scambra)
+* Fixed support for `asset_file_path` in upcoming Rails 3.1. [Philip Arndt](https://github.com/parndt)
+* Updated copyright notice to include the current year. [David Jones](https://github.com/djones)
+* Fixed site bar switch link. [Philip Arndt](https://github.com/parndt)
+* Added support for translating Javascript strings. [Philip Arndt](https://github.com/parndt)
+* Added `refinery.on_attach` for running extra functionality just after Refinery attaches to Rails. Functions similarly to `config.to_prepare`. [Philip Arndt](https://github.com/parndt)
+* [See full list](https://github.com/resolve/refinerycms/compare/0.9.9.10...0.9.9.11)
+
+## 0.9.9.10 [17 March 2011]
+
+* Excluded caching option for menus when logged in. [Philip Arndt](https://github.com/parndt)
+* Fixed site bar translation logic. [Philip Arndt](https://github.com/parndt)
+* Removed `config/settings.rb` file. [Philip Arndt](https://github.com/parndt)
+* Added a default `features/support/paths.rb` file in the `Rails.root` for your paths. [Philip Arndt](https://github.com/parndt)
+* [See full list](https://github.com/resolve/refinerycms/compare/0.9.9.9...0.9.9.10)
+
 ## 0.9.9.9 [15 March 2011]
 
 * Added Japanese translation. [Hiro Asari](https://github.com/BanzaiMan)
@@ -20,7 +51,7 @@
 * Deprecated `rake refinery:update` in favour of rails `generate refinerycms --update`. [Philip Arndt](https://github.com/parndt)
 * Added `--skip-db` option to `bin/refinerycms` installer which doesn't automate any database creation/migration and skips the `rails generate refinerycms` generator. [Philip Arndt](https:/github.com/parndt)
 * Exchanged (help) links for the information.png 'refinery icon'. This will happen automatically if you used `refinery_help_tag`. [Philip Arndt](https://github.com/parndt)
-* Added xhr_paging as an option in crudify which handles the server-side usage of the HTML5 History API. [Philip Arndt](https://github.com/parndt)
+* Added `xhr_paging` as an option in crudify which handles the server-side usage of the HTML5 History API. [Philip Arndt](https://github.com/parndt)
 * Looser Bundler dependency (now `~> 1.0`). [Terence Lee](https://github.com/hone)
 * [See full list](https://github.com/resolve/refinerycms/compare/0.9.9.6...0.9.9.7)
 

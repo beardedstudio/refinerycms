@@ -5,6 +5,8 @@ require 'globalize3'
 module Refinery
   module Pages
 
+    autoload :InstanceMethods, File.expand_path('../refinery/pages/instance_methods', __FILE__)
+
     class << self
       attr_accessor :root
       def root
@@ -13,13 +15,16 @@ module Refinery
     end
 
     class Engine < ::Rails::Engine
-
       initializer "serve static assets" do |app|
         app.middleware.insert_after ::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/public"
       end
 
       config.to_prepare do
         require File.expand_path('../pages/tabs', __FILE__)
+      end
+
+      refinery.on_attach do
+        ::ApplicationController.send :include, ::Refinery::Pages::InstanceMethods
       end
 
       config.after_initialize do
