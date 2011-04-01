@@ -1,6 +1,7 @@
 require 'refinerycms-core'
 require 'awesome_nested_set'
 require 'globalize3'
+require 'seo_meta'
 
 module Refinery
   module Pages
@@ -23,7 +24,7 @@ module Refinery
         require File.expand_path('../pages/tabs', __FILE__)
       end
 
-      refinery.on_attach do
+      refinery.after_inclusion do
         ::ApplicationController.send :include, ::Refinery::Pages::InstanceMethods
       end
 
@@ -31,7 +32,7 @@ module Refinery
         ::Refinery::Plugin.register do |plugin|
           plugin.name = "refinery_pages"
           plugin.directory = "pages"
-          plugin.version = %q{0.9.9}
+          plugin.version = %q{0.9.9.13}
           plugin.menu_match = /(refinery|admin)\/page(_part)?s(_dialogs)?$/
           plugin.activity = {
             :class => Page,

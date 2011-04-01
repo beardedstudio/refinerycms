@@ -2,10 +2,10 @@
 
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-pages}
-  s.version           = %q{0.9.9.13}
+  s.version           = %q{0.9.9.15}
   s.summary           = %q{Pages engine for Refinery CMS}
   s.description       = %q{The default content engine of Refinery CMS. This engine handles the administration and display of user-editable pages.}
-  s.date              = %q{2011-03-28}
+  s.date              = %q{2011-04-01}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
   s.rubyforge_project = %q{refinerycms}
@@ -87,6 +87,7 @@ Gem::Specification.new do |s|
     'db/migrate/20101216194133_remove_cached_slug_from_pages.rb',
     'db/migrate/20110307025652_translate_custom_title_on_pages.rb',
     'db/migrate/20110314213540_remove_translated_fields_from_pages.rb',
+    'db/migrate/20110329080451_create_seo_meta.rb',
     'db/seeds',
     'db/seeds/pages.rb',
     'features',
@@ -114,5 +115,6 @@ Gem::Specification.new do |s|
     'spec/models/page_spec.rb'
   ]
 
-  s.add_dependency 'refinerycms-core', '~> 0.9.9.13'
+  s.add_dependency 'refinerycms-core', '= 0.9.9.15'
+  s.add_dependency 'seo_meta',         '~> 1.0.2'
 end
