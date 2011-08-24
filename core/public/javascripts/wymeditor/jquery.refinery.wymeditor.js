@@ -2154,7 +2154,6 @@ WYMeditor.XhtmlValidator = {
       "html",
       "meta",
       "param",
-      "script",
       "style",
       "title"
       ],
